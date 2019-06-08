@@ -8,12 +8,14 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
+  <ion-list> <!-- revisar estructura del foreach -->
+    <button ion-item *ngFor="let disk of disks" 
+                    (click)="itemTapped($event, item)">
+      <img src="{{ disk.image_url }}" alt="" style="width:100px; height:100px;">
+      <ion-icon [name]="disk.image_url" item-start></ion-icon>
+      {{ disk.title }}
       <div class="item-note" item-end>
-        {{item.note}}
+        {{ disk.artist }}
       </div>
     </button>
   </ion-list>
