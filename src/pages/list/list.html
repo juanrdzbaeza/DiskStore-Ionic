@@ -1,19 +1,21 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+    <button ion-button menuToggle class="my-own-menu" >
+      <ion-icon class="my-own-menu-icon" name="menu"></ion-icon>
     </button>
     <ion-title>List</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
+  <ion-list> <!-- revisar estructura del foreach -->
+    <button ion-item *ngFor="let disk of disks" 
+                    (click)="itemTapped($event, item)">
+      <img src="{{ disk.image_url }}" alt="" style="width:100px; height:100px;">
+      <ion-icon [name]="disk.image_url" item-start></ion-icon>
+      {{ disk.title }}
       <div class="item-note" item-end>
-        {{item.note}}
+        {{ disk.artist }}
       </div>
     </button>
   </ion-list>
