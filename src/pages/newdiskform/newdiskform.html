@@ -11,5 +11,23 @@
 </ion-header>
 
 <ion-content padding>
+  <form [formGroup]="diskForm" (ngSubmit)="saveData()" >
+    
+    <ion-list>
+      <ion-item>
+        <ion-label > Title </ion-label>
+        <ion-input formControlName="title" type="text" placeholder="title of the disk"></ion-input>
+      </ion-item>
+    </ion-list>
 
+    <div padding>
+      <button
+      ion-button
+      block
+      type="submit"
+      [disabled]="!diskForm.valid">
+
+      </button>
+    </div>
+  </form>
 </ion-content>
