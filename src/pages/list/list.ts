@@ -1,4 +1,3 @@
-//import { DiskPage} from '';
 import { DiskstoreProvider } from './../../providers/diskstore/diskstore';
 
 import { Component } from '@angular/core';
