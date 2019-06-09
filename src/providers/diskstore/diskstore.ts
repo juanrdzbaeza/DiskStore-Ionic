@@ -20,9 +20,14 @@ export class DiskstoreProvider {
     return this.http.get(url);
   }
 
-  getDisk(id: any) {
-    let url = baseURL + 'disk/' + id
+  getDisk(_id: any) {
+    let url = baseURL + '/disk/' + _id
     return this.http.get(url);
+  }
+
+  delDisk(_id: any) {
+    let url = baseURL + '/disk/' + _id
+    return this.http.delete(url);
   }
 
 }

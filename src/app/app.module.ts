@@ -5,6 +5,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { DiskPage } from '../pages/disk/disk';
+import { NewdiskformPage } from '../pages/newdiskform/newdiskform'
 import { DiskstoreProvider } from '../providers/diskstore/diskstore';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,7 +18,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    DiskPage,
+    NewdiskformPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    DiskPage,
+    NewdiskformPage
   ],
   providers: [
     StatusBar,

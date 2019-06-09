@@ -70,10 +70,19 @@ h6 {
   background-color: #fff;
 }
 
+.btn-default, .btn-default:hover, .btn-default:focus {
+	color: #333;
+	text-shadow: none;
+	background-color: #fff;
+	border: 1px solid #fff;
+}
 
 
-
-
+.container.foot {
+	height: 50px;
+	bottom: 0px;
+	position: fixed;
+}
 /*
  * FOOTER
  */
