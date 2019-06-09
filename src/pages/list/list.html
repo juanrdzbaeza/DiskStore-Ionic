@@ -3,23 +3,38 @@
     <button ion-button menuToggle class="my-own-menu" >
       <ion-icon class="my-own-menu-icon" name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Disk Store</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list> <!-- revisar estructura del foreach -->
-    <button ion-item *ngFor="let disk of disks" 
-                    (click)="itemTapped($event, item)">
-      <img src="{{ disk.image_url }}" alt="" style="width:100px; height:100px;">
-      <ion-icon [name]="disk.image_url" item-start></ion-icon>
-      {{ disk.title }}
-      <div class="item-note" item-end>
-        {{ disk.artist }}
-      </div>
+  <ion-list style="padding-top: 20px"> <!-- revisar estructura del foreach  -->
+    <button class="list-group-item"
+            *ngFor="let disk of disks" 
+            (click)="getDisk(disk._id)">
+        
+            <ion-thumbnail slot="start">
+              <ion-img [src]="disk.image_url" alt="" ></ion-img>
+            </ion-thumbnail>
+
+            <h3 class="ani-element-on-the-disk-list" >{{ disk.title }}</h3>
+        
+        <h6 class="ani-element-on-the-disk-list" >{{ disk.description }}</h6>
     </button>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Odio est a animi perferendis quas harum tempora unde deserunt 
+    laborum numquam? Velit aspernatur doloribus nisi voluptate explicabo 
+    aliquid eum sequi ea.
+  </p>
+
+  <div class="pull-right">
+    <button ion-button light (click)="addDisk()"> Add Disk </button>
   </div>
+  
+  <p style="height: 50px;">
+
+  </p>
+
 </ion-content>

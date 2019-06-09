@@ -1,0 +1,48 @@
+<!--
+  Generated template for the DiskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Disk Store</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="diskBox">
+    <img src="{{ disk.image_url }}" alt="" style="width:250px; height:250px;">
+    
+    <h1>{{ disk.title }}</h1>
+    <p>{{ disk.description }}</p>
+    <div>
+      <h3>Song List</h3>
+      <ul>
+        Side A
+        <li class=""
+                  *ngFor="let song of A">
+          {{ song }}
+
+        </li>
+      </ul>
+      <ul>
+          Side B
+          <li class=""
+                    *ngFor="let s of B">
+            {{ s }}
+  
+          </li>
+        </ul>
+    </div>
+    <div class="pull-right">
+        <button ion-button light (click)="deleteDisk(disk._id)" > Trash </button>
+    </div>
+  </div>
+  
+
+
+  <p style="height: 50px;">
+
+  </p>
+</ion-content>

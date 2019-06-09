@@ -1,3 +1,27 @@
 page-list {
 
 }
+
+
+.ani-element-on-the-disk-list {
+  color: #debb27;
+  text-decoration: none;
+  text-align: left;
+}
+
+
+.list-group-item{
+  background-color: #73767a;
+  width: 100%;
+  border: 1px solid #333;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+ion-img {
+  display: inline-block;
+  min-width: 100px;
+  min-height: 100px;
+  background: #eee;
+  contain: strict;
+}
