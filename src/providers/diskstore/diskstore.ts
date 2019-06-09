@@ -30,4 +30,9 @@ export class DiskstoreProvider {
     return this.http.delete(url);
   }
 
+  saveDisk(disk: any) {
+    let url = baseURL + '/disk'
+    return this.http.post(url, disk);
+  }
+
 }
