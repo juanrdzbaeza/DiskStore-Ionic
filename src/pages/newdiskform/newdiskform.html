@@ -11,13 +11,92 @@
 </ion-header>
 
 <ion-content padding>
-  <form [formGroup]="diskForm" (ngSubmit)="saveData()" >
+  <form [formGroup]="diskForm" (ngSubmit)="saveData()" class="diskForm" >
     
     <ion-list>
-      <ion-item>
-        <ion-label > Title </ion-label>
-        <ion-input formControlName="title" type="text" placeholder="title of the disk"></ion-input>
+      <p> Title </p>
+      <ion-item>  
+        <ion-input formControlName="title" type="text" placeholder="Title of the disk" value="Legend"></ion-input>
       </ion-item>
+
+      <p> Genre </p>
+      <ion-item>
+        <ion-input formControlName="genre" type="text" placeholder="Genre of the disk" value="Reggae"></ion-input>
+      </ion-item>
+
+      <p> Artist </p>
+      <ion-item>
+        <ion-input formControlName="artist" type="text" placeholder="Artist of the disk" value="Bob Marley & the Waylers"></ion-input>
+      </ion-item>
+
+      <p> Publisher </p>
+      <ion-item>
+        <ion-input formControlName="publisher" type="text" placeholder="Publisher" value="Atlantic"></ion-input>
+      </ion-item>
+
+      <p>Songs of the Disk</p>
+      <h2>Side A</h2>
+      <ion-item>
+        <ion-label > Song1 </ion-label>
+        <ion-input formControlName="song1" type="text" placeholder="Song1" value="Is This Love"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Song2 </ion-label>
+        <ion-input formControlName="song2" type="text" placeholder="Song2" value="No Woman No Cry"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Song3 </ion-label>
+        <ion-input formControlName="song3" type="text" placeholder="Song3" value="Could You Be Loved"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Song4 </ion-label>
+        <ion-input formControlName="song4" type="text" placeholder="Song4" value="Three Little Birds"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Song5 </ion-label>
+        <ion-input formControlName="song5" type="text" placeholder="Song5" value="Buffalo Soldier"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Song6 </ion-label>
+        <ion-input formControlName="song6" type="text" placeholder="Song6" value="Get Up Stand Up"></ion-input>
+      </ion-item>
+      <h2>Side B</h2>
+      <ion-item>
+        <ion-label > Song7 </ion-label>
+        <ion-input formControlName="song7" type="text" placeholder="Song7" value="One Love/People Get Ready"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Song8 </ion-label>
+        <ion-input formControlName="song8" type="text" placeholder="Song8" value="I Shot the Sheriff"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Song9 </ion-label>
+        <ion-input formControlName="song9" type="text" placeholder="Song9" value="Waiting in Vain"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Song10 </ion-label>
+        <ion-input formControlName="song10" type="text" placeholder="Song10" value="Redemption Song"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Song11 </ion-label>
+        <ion-input formControlName="song11" type="text" placeholder="Song11" value="Satisfy My Soul"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Song12 </ion-label>
+        <ion-input formControlName="song12" type="text" placeholder="Song12" value="Exodus"></ion-input>
+      </ion-item>
+
+      <p>Description</p>
+      <ion-item>
+        <ion-textarea formControlName="description" type="text" placeholder="Description" value="Reedición en formato vinilo del mítico recopilatorio con todos los grandes éxitos de Bob Marley y su grupo."></ion-textarea>
+      </ion-item>
+      <p>URL Image</p>
+      <ion-item>
+        <ion-textarea formControlName="image_url" type="text" placeholder="URL for the image" value="https://images-na.ssl-images-amazon.com/images/I/513EjU1PfrL.jpg"></ion-textarea>
+      </ion-item>
+
+
+
     </ion-list>
 
     <div padding>
@@ -26,8 +105,12 @@
       block
       type="submit"
       [disabled]="!diskForm.valid">
-
+        Add new disk
       </button>
     </div>
   </form>
-</ion-content>
+
+  <p style="height: 50px;">
+
+  </p>
+</ion-content >
